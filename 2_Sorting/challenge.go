@@ -40,7 +40,24 @@ func main() {
 	}
 
 	size := len(array)
-	bubbleSort(array[:], size)
-	//exchangeSort(array[:], size) //uncomment to sort with exchange sort method
+
+	fmt.Print("Array : ")
 	printArray(array, size)
+	fmt.Println("\nChoose algorithm :")
+	fmt.Println("1. Bubble Sort ")
+	fmt.Println("2. Exchange Sort ")
+	fmt.Print("Pilihan : ")
+
+	var input int
+	fmt.Scan(&input)
+
+	switch input {
+	case 1:
+		bubbleSort(array[:], size)
+		printArray(array, size)
+
+	case 2:
+		exchangeSort(array[:], size)
+		printArray(array, size)
+	}
 }
